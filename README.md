@@ -5,7 +5,7 @@
 
 Este projeto consiste em um dispositivo de aferição de temperatura e tempo para um forno industrial. O sistema foi programado em linguagem C para o microcontrolador PIC18F4550 (arquitetura RISC da família Microchip) e validado por meio do simulador SimulIDE, tendo como base o pinout do Kit EasyPIC v7.
 
-O objetivo do aferidor é medir a temperatura interna do forno durante um intervalo de tempo predeterminado pelo usuário, utilizando o módulo de conversão analógico-digital para ler um sensor LM35 (emulado neste projeto por um potenciômetro). O equipamento exibe a temperatura captada, dimensionada para a faixa de 0°C a 100°C, juntamente com a contagem regressiva em um display LCD operando de forma contínua. Além disso, o circuito possui botões com tratamento de *bouncing* para a configuração do sistema e um LED dedicado que sinaliza o acionamento da resistência de aquecimento do forno.
+O objetivo do aferidor é medir a temperatura interna do forno durante um intervalo de tempo predeterminado pelo usuário, utilizando o módulo de conversão analógico-digital para ler um sensor LM35 (emulado neste projeto por um potenciômetro). O equipamento exibe a temperatura captada, dimensionada para a faixa de 0°C a 100°C, juntamente com a contagem regressiva em um display LCD operando de forma contínua. Além disso, o circuito possui botões com tratamento de *bouncing* para a configuração do sistema e um LED dedicado que sinaliza quando a temperatura ultrapassa os 50°C.
 
 A descrição técnica de cada decisão de implementação, o detalhamento da configuração dos registradores, dos *Timers* e a inicialização do módulo ADC estão atribuídos diretamente no arquivo C presente neste repositório em formato de comentário.
 
@@ -15,9 +15,9 @@ A descrição técnica de cada decisão de implementação, o detalhamento da co
 
 * Controle da duração da contagem regressiva: O tempo de monitoramento pode ser alternado por meio de um botão, permitindo ao usuário selecionar entre um modo de aferição de curta duração (10 segundos) ou longa duração (60 segundos).
 
-* Acionamento interativo: O início e a pausa da medição térmica e da regressão do tempo são controlados por um segundo botão independente.
+* Acionamento interativo: O início e a pausa da medição de temperatura e da contagem do tempo são controlados por um segundo botão independente.
 
-* Feedback visual de aquecimento: O programa acende um LED no painel sempre que a temperatura do forno exceder 50°C.
+* Feedback visual de aquecimento: O programa acende um LED no painel sempre que a temperatura exceder 50°C.
 
 * Interface de monitoramento: O display LCD apresenta os dados do forno em tempo real, informando o modo de contagem ativo ("S" para curta e "L" para longa) ao lado do tempo restante.
 
