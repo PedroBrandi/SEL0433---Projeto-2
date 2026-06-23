@@ -32,3 +32,8 @@ A descrição técnica de cada decisão de implementação, o detalhamento da co
 * Inicialização da interface gráfica através das bibliotecas nativas do MikroC, operando a escrita de dados para o display LCD no modo serial de 4 bits exigido pelo esquemático.
 
 * Formatação do cálculo e impressão dos valores decimais de temperatura utilizando lógicas de divisão com inteiros e resto de divisão, evitado completamente a declaração de variáveis do tipo *float* visando otimização da memória de dados do microcontrolador.
+
+## Imagens de simulação e compilação
+!<img width="642" height="480" alt="Image" src="https://github.com/user-attachments/assets/c5927709-ec49-4a36-b8b9-3066e4a82317" />
+Simulação - Contagem rápida e LED acionado
+
